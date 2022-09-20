@@ -1,0 +1,80 @@
+{
+    "Catalog": [
+        "Products",
+        "Categories",
+        "Manufacturers",
+        "Product reviews",
+        "Product tags",
+        "Attributes\n\n\n\n\n\n\n\n Product attributes\n\n\n\n\n\n Specification attributes\n\n\n\n\n\n Checkout attributes"
+    ],
+    "Sales": [
+        "Orders",
+        "Shipments",
+        "Return requests",
+        "Recurring payments",
+        "Gift cards",
+        "Shopping carts and wishlists"
+    ],
+    "Customers": [
+        "Customers",
+        "Customer roles",
+        "Online customers",
+        "Vendors",
+        "Activity log",
+        "Activity Types",
+        "GDPR requests (log)"
+    ],
+    "Promotions": [
+        "Discounts",
+        "Affiliates",
+        "Newsletter subscribers",
+        "Campaigns"
+    ],
+    "Content management": [
+        "Topics (pages)",
+        "Message templates",
+        "News items",
+        "News comments",
+        "Blog posts",
+        "Blog comments",
+        "Polls",
+        "Forums"
+    ],
+    "Configuration": [
+        "Settings\n\n\n\n\n\n\n\n General settings\n\n\n\n\n\n Customer settings\n\n\n\n\n\n Order settings\n\n\n\n\n\n Shipping settings\n\n\n\n\n\n Tax settings\n\n\n\n\n\n Catalog settings\n\n\n\n\n\n Shopping cart settings\n\n\n\n\n\n Reward points\n\n\n\n\n\n GDPR settings\n\n\n\n\n\n Vendor settings\n\n\n\n\n\n Blog settings\n\n\n\n\n\n News settings\n\n\n\n\n\n Forum settings\n\n\n\n\n\n Media settings\n\n\n\n\n\n All settings (advanced)",
+        "Email accounts",
+        "Stores",
+        "Countries",
+        "Languages",
+        "Currencies",
+        "Payment methods",
+        "Payment restrictions",
+        "Tax providers",
+        "Tax categories",
+        "Shipping\n\n\n\n\n\n\n\n Shipping providers\n\n\n\n\n\n Warehouses\n\n\n\n\n\n Pickup points\n\n\n\n\n\n Dates and ranges\n\n\n\n\n\n Measures",
+        "Access control list",
+        "Widgets",
+        "Authentication\n\n\n\n\n \n\n\n External authentication\n\n\n\n\n\n Multi-factor authentication",
+        "Web API",
+        "Local plugins",
+        "All plugins and themes"
+    ],
+    "System": [
+        "System information",
+        "Log",
+        "Warnings",
+        "Maintenance",
+        "Message queue",
+        "Schedule tasks",
+        "Search engine friendly page names",
+        "Templates"
+    ],
+    "Reports": [
+        "Sales summary",
+        "Low stock",
+        "Bestsellers",
+        "Products never purchased",
+        "Country sales",
+        "Customer reports\n\n\n\n\n\n\n\n Registered customers\n\n\n\n\n\n Customers by order total\n\n\n\n\n\n Customers by number of orders"
+    ]
+}
