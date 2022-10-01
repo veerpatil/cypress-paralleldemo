@@ -1,5 +1,4 @@
 default:
-  tags: [shared]
   image: cypress/browsers:node16.16.0-chrome106-ff99-edge
 
 variables:
@@ -39,5 +38,3 @@ pages:
     paths:
       - public/
       - /builds/$wd/allure-results
-  tags:
-    - shared
