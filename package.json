@@ -9,6 +9,7 @@
   "author": "veerkumar patil",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.32.1",
     "cypress": "^10.8.0",
     "cypress-xpath": "^2.0.1",
     "playwright-webkit": "^1.25.2"

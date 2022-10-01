@@ -15,7 +15,7 @@ describe("Verify Menu",()=>{
   })
   })
     
-  it.only("Network failure",()=>{
+  it("Network failure",()=>{
     cy.viewport(1980,1080)
     cy.intercept({
       method:'GET',

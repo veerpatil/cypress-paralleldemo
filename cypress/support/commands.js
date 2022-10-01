@@ -25,7 +25,11 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
+
 Cypress.Commands.add('Login',(email,password)=>{
+
+  cy.session(email,()=>{
+    cy.visit("https://admin-demo.nopcommerce.com/login");
     cy.get('#Email')
     .clear()
     .type(email)
@@ -34,7 +38,11 @@ Cypress.Commands.add('Login',(email,password)=>{
     .type(password)
   cy.get("button[type='submit']").click()
 
+  })
+    
+ 
 })
+
 
 
 Cypress.Commands.add("verifyMenu",(locator,menulist)=>{
@@ -54,4 +62,12 @@ Cypress.Commands.add("verifyMenu",(locator,menulist)=>{
     })
     cy.log(subMenu)
 })
+
+
+Cypress.Commands.add('getIframe', (locators) => {
+  return cy
+      .get(locators)
+      .its('0.contentDocument.body').should('not.be.empty')      
+      .then(cy.wrap)
+  })
 
