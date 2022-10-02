@@ -1,0 +1,40 @@
+default:
+  image: cypress/browsers:node16.16.0-chrome106-ff99-edge
+
+variables:
+  wd: '$CI_PROJECT_PATH'
+
+stages:
+  - test
+  - reporting
+
+test:
+  stage: test
+  script:
+    - npm install 
+    - npm run allure:tests
+
+  allow_failure: true
+  artifacts:
+    expire_in: 30 days
+    when: always
+    paths:
+      - /builds/$wd/allure-results
+  
+pages:
+  image: timbru31/java-node:8-jdk-gallium
+  stage: reporting
+  before_script:
+  - npm install -g allure-commandline --save-dev
+  needs:
+    - test
+  dependencies:
+    - test
+  script:
+    - allure generate allure-results --clean -o allure-report
+    - cp -r allure-report/ public/
+  when: always
+  artifacts:
+    paths:
+      - public/
+      - /builds/$wd/allure-results
