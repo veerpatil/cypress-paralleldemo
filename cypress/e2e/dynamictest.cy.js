@@ -2,11 +2,17 @@
 import menus from '../fixtures/menu.json'
 
 describe("Verify Menu",()=>{
+  beforeEach(() => {
+    cy.viewport(1980, 1080);
+    cy.Login("admin@yourstore.com", "admin");
+   
+    // cy.Login("admin@yourstore.com", "admin");
+  });
+
   Object.keys(menus).forEach(key => {
     it("Verify SubMenu items in  " + key, ()=>{
       cy.viewport(1980,1080)
-      cy.visit("https://admin-demo.nopcommerce.com/login", {retryOnNetworkFailure:false})
-      cy.Login('admin@yourstore.com','admin')
+      cy.visit("https://admin-demo.nopcommerce.com/admin", {retryOnNetworkFailure:false})
       cy.wait(10000)
       let xpath = "//p[normalize-space()='"+key+"']"
       cy.xpath(xpath).first().click()

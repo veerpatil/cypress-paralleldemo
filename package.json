@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "allure:tests": "npx cypress run --browser chrome --headed --env allure=true",
+    "allure:tests": "npx cypress run --browser chrome --headed --spec cypress/e2e/tmp/parallel.cy.js",
     "allure:report": "allure generate allure-results --clean -o allure-report"
   },
   "author": "veerkumar patil",
@@ -15,5 +15,8 @@
     "cypress": "^10.8.0",
     "cypress-xpath": "^2.0.1",
     "playwright-webkit": "^1.25.2"
+  },
+  "dependencies": {
+    "cypress-gitlab-parallel-runner": "^1.1.2"
   }
 }

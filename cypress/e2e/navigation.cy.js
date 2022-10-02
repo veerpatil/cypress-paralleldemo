@@ -36,7 +36,7 @@ describe("Visit", () => {
     .its('navigator.platform').should('equal','Linux x86_64')
   })
 
-  it.only("Verify Cy visit Fail On Status Code options", () => {
+  it("Verify Cy visit Fail On Status Code options", () => {
     //using timeout , failOnStatusCode ,
     cy.visit("https://admin-demo.nopcommerce.com/test", {
       failOnStatusCode: false,
@@ -46,7 +46,7 @@ describe("Visit", () => {
 
 
 
-describe.only("Navigation", () => {
+describe("Navigation", () => {
       beforeEach(() => {
         cy.viewport(1920, 1080);
         cy.visit("/");

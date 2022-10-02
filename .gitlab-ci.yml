@@ -20,6 +20,7 @@ test:
     when: always
     paths:
       - /builds/$wd/allure-results
+  parallel: 7
   
 pages:
   image: timbru31/java-node:8-jdk-gallium
