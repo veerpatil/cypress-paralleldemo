@@ -1,0 +1,19 @@
+{
+  "name": "cypressbootcamp",
+  "version": "1.0.0",
+  "description": "Test repository for cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "allure:tests": "npx cypress run --browser chrome --headed --env allure=true",
+    "allure:report": "allure generate allure-results --clean -o allure-report"
+  },
+  "author": "veerkumar patil",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.32.1",
+    "cypress": "^10.8.0",
+    "cypress-xpath": "^2.0.1",
+    "playwright-webkit": "^1.25.2"
+  }
+}
