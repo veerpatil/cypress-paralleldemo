@@ -14,6 +14,13 @@ jobs:
       - name: Install Packages
         run:  npm install  
       - run:  npx cypress run --env allure=true --spec $(node cypress-parallel.js ${{ matrix.containers }} 5)
+      
+  job2:
+    name: reports
+    if: always()
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()
@@ -21,12 +28,6 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-  job2:
-    name: reports
-    if: always()
-    runs-on: ubuntu-latest
-    needs: job1
-    steps:
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
