@@ -1,0 +1,29 @@
+name: Cypress API Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+            fail-fast: false
+            matrix:
+             containers: [ 0, 1, 2, 3, 4 ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Packages
+        run:  npm install  
+      - run:  npx cypress run --env allure=true -spec $(node cypress-parallel.js 5 ${{ matrix.containers }})
+      - name: Install Allure Report
+        run: npm install -g allure-commandline --save-dev
+      - name: Report
+        run: npm run allure generate allure-results --clean -o allure-report
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-report
