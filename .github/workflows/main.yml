@@ -14,19 +14,26 @@ jobs:
       - name: Install Packages
         run:  npm install  
       - run:  npx cypress run --env allure=true --spec $(node cypress-parallel.js ${{ matrix.containers }} 5)
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+      # - name: Get Allure history
+      #   uses: actions/checkout@v2
+      #   if: always()
+      #   continue-on-error: true
+      #   with:
+      #     ref: gh-pages
+      #     path: gh-pages
   job2:
     name: reports
     if: ${{ always() }}
     runs-on: ubuntu-latest
     needs: job1
-    steps:
+    steps: 
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with: actions/checkout@v2
+          ref: gh-pages
+          path: gh-pages
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
