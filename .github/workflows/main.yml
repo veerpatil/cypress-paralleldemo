@@ -23,7 +23,7 @@ jobs:
           path: gh-pages
   job2:
     name: reports
-    
+    if: always()
     runs-on: ubuntu-latest
     needs: job1
     steps:
