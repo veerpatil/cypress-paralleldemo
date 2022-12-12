@@ -1,7 +1,8 @@
 name: Cypress API Tests
 on: [push]
 jobs:
-  cypress-run:
+  job1:
+    name: cypress-run
     runs-on: ubuntu-latest
     strategy:
             fail-fast: false
@@ -20,7 +21,10 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-
+  job2:
+    name: reports
+    needs: cypress-run
+    steps:
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
