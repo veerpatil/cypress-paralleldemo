@@ -1,1 +1,1 @@
-{"total":2,"items":[{"uid":"d697a8a4977c14029d15c2b0b83e4b52","name":"Navigation","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}},{"uid":"80ae9b576b1327bee601618848b79b4b","name":"Visit","statistic":{"failed":0,"broken":0,"skipped":4,"passed":1,"unknown":0,"total":5}}]}
+{"total":1,"items":[{"uid":"5e7373db695d7d985b457980612168b2","name":"Verify Menu","statistic":{"failed":3,"broken":0,"skipped":0,"passed":6,"unknown":0,"total":9}}]}
