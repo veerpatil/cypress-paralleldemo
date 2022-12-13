@@ -9,7 +9,7 @@ describe("Login Test",()=>{
     // cy.Login("admin@yourstore.com", "admin");
   });
   Object.values(users).forEach(user => {
-    it("Login Using Custom Command", ()=>{
+    it("Login Using Custom Command" + user, ()=>{
       const menuList = [
           'Dashboard',
           'Catalog',
