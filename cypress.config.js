@@ -14,6 +14,7 @@ module.exports = defineConfig({
     experimentalStudio:true,
     experimentalWebKitSupport: true,
     experimentalSessionAndOrigin:true,
+    video:false,
     include: ["./node_modules/cypress", "cypress/**/*.js"],
     baseUrl:'https://admin-demo.nopcommerce.com'
   },
