@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 const getspecFiles = require("cypress-gitlab-parallel-runner")
+import {getMyspec} from './cypress-parallel.js';
 module.exports = defineConfig({
  
   
@@ -8,7 +9,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       // getspecFiles('./cypress/e2e',true)
-      getMyspec(1,5)
       allureWriter(on, config);
       return config;
     },
