@@ -8,6 +8,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       // getspecFiles('./cypress/e2e',true)
+      getMyspec(1,5)
       allureWriter(on, config);
       return config;
     },
