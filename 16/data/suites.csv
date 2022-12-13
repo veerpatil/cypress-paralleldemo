@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Dec 13 13:17:29 GMT 2022","Tue Dec 13 13:17:59 GMT 2022","29442","","Actions Demo","","","","Working with SelectDropdowns",""
-"passed","Tue Dec 13 13:17:59 GMT 2022","Tue Dec 13 13:18:11 GMT 2022","12572","","Actions Demo","","","","Working with Select/ Dropdowns",""
-"passed","Tue Dec 13 13:18:36 GMT 2022","Tue Dec 13 13:18:54 GMT 2022","18488","","Nop Commerce Admin Module","","","","Admin Login Test",""
-"passed","Tue Dec 13 13:16:46 GMT 2022","Tue Dec 13 13:17:05 GMT 2022","18197","","Actions Demo","","","","Type in to element",""
-"passed","Tue Dec 13 13:17:17 GMT 2022","Tue Dec 13 13:17:29 GMT 2022","12713","","Actions Demo","","","","Working with checkboxes",""
